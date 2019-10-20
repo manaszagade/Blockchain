@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+ h1{
+	text-align:center;
+	color:red;
+	margin-top:7%;
+	font-size:80px;
+}
+ body{
+	background-image:url("index.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+div{
+	background-color:white;
+	padding:30px;
+	width:40%;
+	height:35%;
+	margin-left:27%;
+	margin-top:8%;
+	text-align:center;
+	border:1px solid black;
+	border-radius:10px;
+	}
+</style>
+<h1>CODE-BLOODED</h1>
+<div>
+<form>
+ Manager ID:
+  <input  type="text" name="EmpID"><br><br>
+  Employee ID:
+  <input type="text" name="MngID"><br><br>
+ Project ID:
+ <input type="text" name="ProjID"><br><br>
+Number Of Hours:
+<input type="text" name="Hrs"><br><br>
+<button type="button" onclick="Add()"  id="Add">ADD BLOCK</button>
+<button type="button" onclick="Mine()" id="Mine">MINE BLOCK</button>
+<button type="button" onclick="Verify()" id="Verify">VERIFY</button>
+<button type="button" onclick="Append()" id="Append">Append</button>
+</form>
+</div>
+<script>
+function Add()
+{
+	var boo = confirm("Press a button!");
+	if (boo == true) {
+  	var add = document.getElementById("Add").value;
+	var mine= document.getElementById("Mine").value;
+	var verify= document.getElementById("Verify").value;
+	var append= document.getElementById("Append").value;
+} 
+else {
+  		alert("Sad");
+}
+} 
+</script>
+</body>
+</html>

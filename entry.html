@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+ h1{
+	font-family:'Orbitron',sans-serif;
+	margin-left:27%;
+	color:red;
+	margin-top:7%;
+	font-size:80px;
+}
+ body{
+	background-image:url("index.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:pink;
+}
+div{
+	background-color:white;
+	padding:30px;
+	width:40%;
+	height:35%;
+	margin-left:27%;
+	margin-top:8%;
+	text-align:center;
+	border:1px solid black;
+	border-radius:10px;
+	}
+</style>
+<h1>CODE-BLOODED</h1>
+<div>
+<form>
+Company ID:
+  <input  type="number" id="CompID"><br><br>
+Authentication key:
+  <input  type="number" id="MngID"><br><br>
+  Employee ID:
+  <input type="number" id="EmpID"><br><br>
+ Project ID:
+ <input type="number" id="ProjID"><br><br>
+Number Of Hours:
+<input type="number" id="Hrs"><br><br>
+<button type="button" onclick="Add()" >ADD BLOCK</button>
+ <a href="http://127.0.0.1:5001/print_chain"><button type="button">View</button></a>
+<button type="button" onclick="Verify()">VERIFY</button>
+<button type="button" onclick="Append()">Append</button>
+
+</form>
+ </div>
+ <script>
+function Append()
+{
+  	var eid = document.getElementById("EmpID").value;
+  	var mid=  document.getElementById("MngID").value;
+  	var pid=  document.getElementById("ProjID").value;
+  	var hid=  document.getElementById("Hrs").value;
+	var cid=  document.getElementById("CompID").value;
+	location.replace("http://127.0.0.1:5001/storedata/"+eid+"/"+mid+"/"+pid+"/"+hid+"/"+cid);
+}
+
+function Verify()
+{
+	location.replace("http://127.0.0.1:5001/check_if_valid");
+}
+function Add()
+{
+	location.replace("http://127.0.0.1:5001/addblock");
+}
+function update()
+{
+	location.replace("http://127.0.0.1:5002/replace_chain")
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+ h1{
+	font-family:'Times New Roman',Times,serif;
+	margin-left:27%;
+	color:red;
+	margin-top:7%;
+	font-size:80px;
+}
+ body{
+	background-image:url("index.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:pink;
+}
+div{
+	background-color:white;
+	padding:25px;
+	width:20%;
+	height:35%;
+	margin-left:37%;
+	margin-top:8%;
+	text-align:center;
+	border:1px solid black;
+	border-radius:10px;
+	}
+</style>
+<h1 id="type"></h1>
+<div>
+<form>
+<a href="login.html"><button type="button" name="login">Login</button></a>
+<a href="http://127.0.0.1:5001/print_chain"><button type="button" name="View">View</button></a>
+</form>
+</div>
+<script>
+    var i = 0;
+var txt = 'CODE BLOODED';
+var speed = 250;
+
+window.onload=function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("type").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+</body>
+</html>

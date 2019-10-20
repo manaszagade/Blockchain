@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+ h1{
+	font-family:'Orbitron',sans-serif;
+	margin-left:27%;
+	color:red;
+	margin-top:7%;
+	font-size:80px;
+}
+ body{
+	background-image:url("index.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:pink;
+}
+div{
+	background-color:white;
+	padding:30px;
+	width:40%;
+	height:35%;
+	margin-left:27%;
+	margin-top:8%;
+	text-align:center;
+	border:1px solid black;
+	border-radius:10px;
+	}
+</style>
+<h1>CODE-BLOODED</h1>
+<div>
+<form>
+ Employee ID:
+  <input  type="text" name="ID" id="ID"><br><br>
+  Password:
+  <input type="password" name="Password" id="Password"><br><br>
+<button type="button" onclick="send()">Submit</button>
+</form>
+</div>
+<script>
+function send()
+{
+	var x = document.getElementById("ID").value;
+	var y = document.getElementById("Password").value; 
+
+	location.replace("http://127.0.0.1:5001/verify/"+x+"/"+y);
+} 
+</script>
+</body>
+</html>
